@@ -1,0 +1,109 @@
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  
+  position: relative;
+  z-index: 2;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem; 
+}
+
+.display {
+  font-size: 12rem;
+  font-weight: 700;
+  line-height: 1;
+  
+  background: linear-gradient(145deg, #FF6BFF, #6B8AFF, #00FFF0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  text-shadow: 0 0 10px rgba(255, 107, 255, 0.2),
+               0 0 25px rgba(107, 138, 255, 0.3),
+               0 0 45px rgba(0, 255, 240, 0.2);
+  
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 107, 255, 0.2),
+                 0 0 25px rgba(107, 138, 255, 0.3),
+                 0 0 45px rgba(0, 255, 240, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 107, 255, 0.4),
+                 0 0 35px rgba(107, 138, 255, 0.5),
+                 0 0 55px rgba(0, 255, 240, 0.4);
+  }
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.9rem 3.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15); 
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn.start {
+  background: linear-gradient(135deg, #00F2A9, #00C9FF);
+  box-shadow: 0 5px 20px rgba(0, 242, 169, 0.2),
+              0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.start:hover {
+  box-shadow: 0 8px 30px rgba(0, 242, 169, 0.35),
+              0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn.stop {
+  background: linear-gradient(135deg, #FF516A, #FF2525);
+  box-shadow: 0 5px 20px rgba(255, 81, 106, 0.3),
+              0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.stop:hover {
+  box-shadow: 0 8px 30px rgba(255, 81, 106, 0.5),
+              0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn.reset {
+  background: linear-gradient(135deg, #6E48AA, #9D50BB);
+  box-shadow: 0 5px 15px rgba(110, 72, 170, 0.3),
+              0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.reset:hover {
+  box-shadow: 0 8px 25px rgba(110, 72, 170, 0.45),
+              0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
